@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.1
+
+- A new overlay, on iOS and on Android. It was rebuilt for a real phone: three fingers open and close it, every circle gets a numbered ring and a note box beside it, and there is one dock at the bottom. iOS links FIXME's iOS overlay 0.1.5 (it was 0.1.4) and Android pulls the Android helper 0.1.1 (it was 0.1.0) from `https://maven.getfixme.dev`.
+- Start the mic when I circle. It is off until you turn it on; once on, the mic starts listening as soon as you circle something.
+- Live control on Android. While your coding agent drives your app through FIXME, a small pill with a Stop button stays on the phone or emulator, a soft ring shows where the agent taps, and touching the screen yourself takes over at once. Taps now activate a switch once, scrolling goes to the list you can see, and typing goes into the field that has focus. A screen drawn by Flutter is reported as Flutter. iOS has the same pill.
+- A small tab on the right edge of the screen on Android opens the overlay, tells you when a report is on its way or waiting for your Mac, and is the way in when TalkBack is on. Two fingers scroll your app under the overlay, and a circle drawn over a native list moves with it. Over a Flutter list, ink stays where you drew it.
+- When your free fixes are used up, a card on the phone says so instead of opening an overlay that would lose your work. Its button opens FIXME on your Mac. Buying FIXME unlocks the phone at once, with no new pairing and nothing to set up again.
+- To update: change `ref: v0.1.0` to `ref: v0.1.1` in `pubspec.yaml` and run `flutter pub get`, then run your app again. FIXME's Mac app can do this for you.
+
 ## 0.1.0
 
 - First release. Debug builds only: `FixmeFlutter.wrap` returns your app unchanged in profile and release builds, and the

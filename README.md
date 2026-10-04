@@ -26,7 +26,7 @@ dev_dependencies:
   fixme_flutter:
     git:
       url: https://github.com/fixme-dev/fixme-flutter.git
-      ref: v0.1.0
+      ref: v0.1.1
 ```
 
 and wrap your root widget:
@@ -90,6 +90,10 @@ for attached devices, so a phone on USB or an emulator finds your Mac at once. T
    tap Type; each circle keeps its own note. Say "FIXME, clip that" to send the last 30 seconds as a clip.
 4. `FixmeFlutter.open()` opens the same overlay from your own debug menu, and `FixmeFlutter.clip(seconds: 10)` sends a
    clip from code.
+5. While your coding agent drives your app through FIXME, a pill with a Stop button shows on the phone. Touch the screen
+   yourself, or tap Stop, and you have control again.
+6. When your free fixes are used up, a card on the phone says so instead of opening the overlay. Its button opens FIXME on
+   your Mac, and buying FIXME unlocks the phone with nothing to set up again.
 
 ## What a ticket contains
 

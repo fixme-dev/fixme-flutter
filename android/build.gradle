@@ -11,7 +11,7 @@ version = "1.0"
 
 apply plugin: "com.android.library"
 
-def fixmeAndroidVersion = rootProject.hasProperty("fixmeAndroidVersion") ? rootProject.property("fixmeAndroidVersion") : "0.1.0"
+def fixmeAndroidVersion = rootProject.hasProperty("fixmeAndroidVersion") ? rootProject.property("fixmeAndroidVersion") : "0.1.1"
 // Where the helper comes from: FIXME's Maven repository (a static site on R2), or a file:// folder for an unreleased build
 // (scripts/publish-android-maven.sh --local), set with -PfixmeMavenUrl=... or the FIXME_MAVEN_URL environment variable.
 def fixmeMavenUrl = rootProject.hasProperty("fixmeMavenUrl") ? rootProject.property("fixmeMavenUrl") : (System.getenv("FIXME_MAVEN_URL") ?: "https://maven.getfixme.dev")
