@@ -1,0 +1,11 @@
+FIXME Flutter helper (fixme_flutter) license
+
+Copyright (c) 2026 FIXME (getfixme.dev). All rights reserved.
+
+You may install this package and use it in the development builds of apps you develop, for use with FIXME.
+
+You may not: redistribute it on its own or as part of another package; ship it active in builds you distribute
+to end users (its production entry point is a no-op); or modify it and distribute the result.
+
+The package is provided "as is", without warranty of any kind. In no event shall the author be liable for any
+claim, damages or other liability arising from its use.

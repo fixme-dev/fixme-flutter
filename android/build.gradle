@@ -1,0 +1,46 @@
+// The Android half of fixme_flutter: a plugin that connects Dart to FIXME's native Android overlay (dev.getfixme:fixme-android),
+// the same contract the iOS half and the React Native module implement (Packages/fixme-react-native/DEVELOPMENT.md, "Native bridge
+// contract"). The overlay, the Mac link, pairing, tickets and clips are the native helper's; this plugin lets Dart answer
+// "what do you know about these circles?" with the widget's file and line.
+//
+// Debug only. The library has a real `debug` variant (the plugin, plus the helper as a dependency of that variant alone) and
+// inert `release` and `profile` variants, so a release or profile build contains no FIXME code, whatever the Flutter tooling does
+// about plugins listed under dev_dependencies.
+group = "dev.fixme.flutter"
+version = "1.0"
+
+apply plugin: "com.android.library"
+
+def fixmeAndroidVersion = rootProject.hasProperty("fixmeAndroidVersion") ? rootProject.property("fixmeAndroidVersion") : "0.1.0"
+// Where the helper comes from: FIXME's Maven repository (a static site on R2), or a file:// folder for an unreleased build
+// (scripts/publish-android-maven.sh --local), set with -PfixmeMavenUrl=... or the FIXME_MAVEN_URL environment variable.
+def fixmeMavenUrl = rootProject.hasProperty("fixmeMavenUrl") ? rootProject.property("fixmeMavenUrl") : (System.getenv("FIXME_MAVEN_URL") ?: "https://maven.getfixme.dev")
+
+android {
+  namespace "dev.fixme.flutter"
+  compileSdk 35
+  defaultConfig { minSdk 24 }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+  lint { abortOnError false }
+}
+
+// A library's dependencies resolve with the repositories of the project that asks, which is the app's, so the repository goes
+// on every project of the build (only the helper's own group comes from it).
+rootProject.allprojects {
+  repositories {
+    google()
+    mavenCentral()
+    maven {
+      url fixmeMavenUrl
+      content { includeGroup "dev.getfixme" }
+    }
+  }
+}
+
+dependencies {
+  // The native helper, in debug builds only. It starts itself (a ContentProvider) and draws the overlay.
+  debugApi "dev.getfixme:fixme-android:${fixmeAndroidVersion}"
+}

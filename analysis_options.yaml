@@ -1,0 +1,11 @@
+analyzer:
+  exclude:
+    - build/**
+    - ios/**
+    - android/**
+  language:
+    strict-casts: false
+linter:
+  rules:
+    - avoid_print
+    - prefer_const_constructors

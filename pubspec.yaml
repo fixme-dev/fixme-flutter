@@ -1,0 +1,32 @@
+name: fixme_flutter
+description: >-
+  Debug-only FIXME helper for Flutter apps. Three-finger tap, circle a UI bug, say what's wrong, and your AI coding
+  agent gets the exact file and line of the widget, the widget tree, the console and a clip.
+version: 0.1.0
+homepage: https://getfixme.dev
+repository: https://github.com/fixme-dev/fixme-flutter
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# A plugin so the native FIXME overlay can be linked in and ask Dart which widget was circled: PointerKit on iOS (ios/, see
+# ios/fixme_flutter.podspec) and the Android helper on Android (android/, see android/build.gradle). Where no native helper
+# runs (profile and release builds), nothing is drawn and nothing is sent.
+flutter:
+  plugin:
+    platforms:
+      ios:
+        pluginClass: FixmeFlutterPlugin
+      android:
+        package: dev.fixme.flutter
+        pluginClass: FixmeFlutterPlugin

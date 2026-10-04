@@ -1,0 +1,37 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -language-mode 6 -O -enable-experimental-feature DebugDescriptionMacro -module-name PointerKit -package-name pointer
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4
+import AVFoundation
+@preconcurrency import Darwin
+import Foundation
+import MachO
+import MediaPlayer
+import Network
+import OSLog
+import PointerProtocol
+import ReplayKit
+import Security
+import Speech
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+@_cdecl("PointerKitStart")
+public func pointerKitStart() -> Swift::Bool
+@_inheritsConvenienceInitializers @objc(PKFrameworkBridge) final public class FrameworkBridge : ObjectiveC::NSObject {
+  @objc public static var isRunning: Swift::Bool {
+    @objc get
+  }
+  @objc public static var sdkVersion: Swift::String {
+    @objc get
+  }
+  @objc public static func setEnricher(_ framework: Swift::String, handler: ((Swift::String, @escaping (Swift::String?) -> Swift::Void) -> Swift::Void)?)
+  @objc public static func openOverlay()
+  @objc(clipSeconds:) public static func clip(seconds: Swift::Int)
+  @objc public static func toggleRecording()
+  @objc override dynamic public init()
+  @objc deinit
+}
