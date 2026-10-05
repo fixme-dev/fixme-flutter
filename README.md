@@ -26,7 +26,7 @@ dev_dependencies:
   fixme_flutter:
     git:
       url: https://github.com/fixme-dev/fixme-flutter.git
-      ref: v0.1.1
+      ref: v0.1.2
 ```
 
 and wrap your root widget:
