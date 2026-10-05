@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.3
+
+- The Android helper is now 0.1.3 (from `https://maven.getfixme.dev`) and iOS links FIXME's iOS overlay 0.1.6.
+- Clips on Android are ready in about a second, not about eight.
+- Flutter screens are no longer black in Android clips, circle screenshots and live screenshots.
+- The first-time lesson shows the real dock and the real edge tab, on Android and iOS, instead of a drawn copy.
+- The edge tab on Android and iOS only opens the overlay. Its film button was taken for the way in.
+- The "FIXME" on the edge tab no longer clips at a large font size on Android.
+- When your agent drives your app through FIXME on Android, each answer waits until the screen has stopped moving.
+- Live control never answers with an empty screen. If the app is in the background the answer says so (Android and iOS), and a window that is visible but paused, such as a permission dialog, the share sheet or split screen, is still driven on Android.
+- On Android, if the phone's speech recognizer stops answering, the note box says so and lets you type, instead of listening forever.
+- To update: change `ref: v0.1.2` to `ref: v0.1.3` in `pubspec.yaml` and run `flutter pub get`, then run your app again.
+
 ## 0.1.2
 
 - The Android helper is now 0.1.2 (from `https://maven.getfixme.dev`). iOS is unchanged: it still links FIXME's iOS overlay 0.1.5.

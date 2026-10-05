@@ -15,7 +15,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'fixme_flutter'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'FIXME for Flutter: circle a bug on your iPhone, your AI agent gets the file and line.'
   s.description      = <<-DESC
 Debug-only helper for Flutter apps. On iOS it embeds FIXME's native overlay (PointerKit) and answers the one thing only

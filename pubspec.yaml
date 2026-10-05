@@ -2,7 +2,7 @@ name: fixme_flutter
 description: >-
   Debug-only FIXME helper for Flutter apps. Three-finger tap, circle a UI bug, say what's wrong, and your AI coding
   agent gets the exact file and line of the widget, the widget tree, the console and a clip.
-version: 0.1.2
+version: 0.1.3
 homepage: https://getfixme.dev
 repository: https://github.com/fixme-dev/fixme-flutter
 publish_to: none
