@@ -115,6 +115,11 @@ Flutter 3.10 or later, and the FIXME Mac app. The native overlay needs iOS 16 or
 The helper talks only to your own Mac: directly over your network or USB cable, or, on iOS, through FIXME's end-to-end
 encrypted relay. Nothing goes to any other server.
 
+## Bugs and ideas
+
+Found a bug, or have an idea? Open an issue at https://github.com/fixme-dev/fixme-issues. Issues there are public, so
+leave out file paths, phone names and anything private. In the FIXME app, Help, then Report a Bug, fills in your versions for you.
+
 ## License
 
 See [LICENSE](LICENSE). Free to use in development builds alongside FIXME.
