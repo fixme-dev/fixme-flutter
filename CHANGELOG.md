@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5
+
+- The Android helper is now 0.1.5. A two-finger pan scrolls Flutter screens (it did nothing over a scrolling list). iOS stays PointerKit 0.1.7.
+- To update: change `ref: v0.1.4` to `ref: v0.1.5` in `pubspec.yaml` and run `flutter pub get`, then run your app again.
+
 ## 0.1.4
 
 - The Android helper is now 0.1.4 (from `https://maven.getfixme.dev`) and iOS links FIXME's iOS overlay 0.1.7.
